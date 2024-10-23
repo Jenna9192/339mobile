@@ -7,9 +7,7 @@ body{
 nav{
     background-color: #00383D;
     padding: 20px;
-    margin-top: -20px;
-    margin-left: -20px;  /* Override left margin */
-    margin-right: -20px;
+    margin: -20px -20px -20px -20px;
 }
 
 nav ul{
@@ -18,7 +16,6 @@ nav ul{
 
 ul li a {
     text-decoration: none; /* Remove underline from links */
-    color: inherit; /* Inherit color from parent element */
     display: block; /* Make links fill the entire list item */
     color: #F1DA63;
     padding: 5px;
@@ -45,8 +42,7 @@ header {
     background-color: #00383D;
     color: #FAF4E8;
     padding: 20px;;
-    margin-left: -20px;  /* Override left margin */
-    margin-right: -20px;
+    margin: 10px -20px;  /* Override left margin */
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
 }
@@ -78,10 +74,8 @@ section h2{
 
 #team-results{
     background-color: #FE763A;
-    margin-left: -20px;
-    margin-right: -20px;
-    padding: 20px;
-    padding-bottom: 40px;
+    margin: 20px -20px;
+    padding: 30px 20px;
 }
 
 th{
@@ -124,9 +118,7 @@ footer{
     border-top-right-radius: 50px;
     background-color: #00383D;
     color:#FAF4E8;
-    margin-left: -20px;
-    margin-right: -20px;
-    margin-bottom: -20px;
+    margin: -20px -20px;
     padding: 50px 20px;
 }
 
