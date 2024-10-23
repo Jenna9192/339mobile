@@ -33,14 +33,14 @@ def csv_to_html(csv_filename, output_folder):
 <link rel="stylesheet" href="../css/style.css">
 </head>
    <body>
-   <a href = "#main">Skip to Main Content</a>
+   <a href = "#main" class="skip" >Skip to Main Content</a>
    <nav>
      <ul>
-        <li><a href="index.html">Home Page</a></li>
-        <li><a href="#summary">Summary</a></li>
-        <li><a href="#team-results">Team Results</a></li>
-        <li><a href="#individual-results">Individual Results</a></li>
-        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="index.html">HOME PAGE</a></li>
+        <li><a href="#summary">SUMMARY</a></li>
+        <li><a href="#team-results">TEAM RESULTS</a></li>
+        <li><a href="#individual-results">INDIVIDUAL RESULTS</a></li>
+        <li><a href="#gallery">GALLERY</a></li>
      </ul>
    </nav>
    <header>
