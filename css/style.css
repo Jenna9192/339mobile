@@ -177,6 +177,18 @@ dt {
     justify-content: space-around;
 }
 
+#gallery {
+    display: grid;
+    grid-template-columns: 95%;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+#gallery img{
+    border-radius: 20px;
+    width: 100%;
+}
+
 
 
 
