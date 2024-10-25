@@ -143,6 +143,8 @@ figcaption {
 figure img{
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    width:90%;
+    margin: auto;
 }
 
 dl {
@@ -157,4 +159,10 @@ dt {
     font-weight: bold;
     color:#FE763A;
     display: inline;
+}
+
+#individual-results{
+    display: grid;
+    grid-template-columns: 95%;
+    justify-content: space-around;
 }
