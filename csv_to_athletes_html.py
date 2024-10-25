@@ -70,7 +70,7 @@ def gen_athlete_page(data, outfile):
    <header>
       <!--Athlete would input headshot-->
        <h1>{data["name"]}</h1>
-      <img src="../images/profiles/{data["athlete_id"]}.jpg" alt="Athlete headshot" width="200"> 
+      <img src="../images/profiles/{data["athlete_id"]}.jpg" alt="Athlete headshot" > 
    </header>
    <main id = "main">
       <section id= "athlete-sr-table">

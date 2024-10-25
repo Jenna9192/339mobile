@@ -22,6 +22,15 @@ ul li a {
     font-weight: bold;
 }
 
+#meets ul{
+    list-style-type: none;
+}
+
+#meets ul li a{
+    color:#00383D;
+    text-decoration: underline;
+}
+
 :focus{
     border: 2px solid #FE763A;
 }
@@ -143,7 +152,7 @@ figcaption {
 figure img{
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    width:90%;
+    width:100%;
     margin: auto;
 }
 
@@ -166,3 +175,5 @@ dt {
     grid-template-columns: 95%;
     justify-content: space-around;
 }
+
+
