@@ -22,9 +22,6 @@ ul li a {
     font-weight: bold;
 }
 
-#meets ul{
-    list-style-type: none;
-}
 
 #meets ul li a{
     color:#00383D;
@@ -97,6 +94,10 @@ th{
 
 td{
     padding: 15px 25px;
+}
+
+#meets li:nth-child(odd) {
+    background-color: #F1DA63;
 }
 
 tr:nth-child(odd){
@@ -175,6 +176,7 @@ dt {
     grid-template-columns: 95%;
     justify-content: space-around;
 }
+
 
 
 
