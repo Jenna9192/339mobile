@@ -48,6 +48,8 @@ def csv_to_html(csv_filename, output_folder):
        
         <h1><a href="{link_url}">{link_text}</a></h1>
         <h2>{h2_text}</h2>
+        <button onclick="myFunction()">Toggle dark mode</button>
+
 </header>
    <main id = "main">
 
@@ -131,6 +133,12 @@ def csv_to_html(csv_filename, output_folder):
 
 
                      </footer>
+        <script>
+            function myFunction() {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+            }
+        </script>
         </body>
 </html>
 """
