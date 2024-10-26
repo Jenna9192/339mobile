@@ -61,18 +61,20 @@ def csv_to_html(csv_filename, output_folder):
 
         # Start container for individual results
         html_content += """<section id="team-results">\n
-        <h2>Team Results</h2>"""
+        <h2>Team Results</h2>
+        <div class ="results_table">"""
 
         # Process the remaining rows (after the first five)
         html_content += """<table>\n"""
         table_start = True
 
-        for row in rows[4:]:
-            # For rows that are 3 columns wide, add to the team places list
+        for i, row in enumerate(rows[4:]):
+    # For rows that are 3 columns wide
             if len(row) == 3:
+                # Add rows with a collapsible class for rows beyond the first 10
+                
                 if row[0] == "Place":
                     html_content += f"<tr><th>{row[0]}</th><th>{row[1]}</th><th>{row[2]}</th></tr>\n"
-
                 else:
                     html_content += f"<tr><td>{row[0]}</td><td>{row[1]}</td><td> {row[2]}</td></tr>\n"
 
@@ -80,7 +82,8 @@ def csv_to_html(csv_filename, output_folder):
             elif len(row) == 8 and row[5].strip().lower() == 'ann arbor skyline':
                 if table_start == True:
                     table_start = False
-                    html_content += "</table>\n"
+                    html_content += """</table>\n
+                    </div>"""
                     html_content += """</section>\n
                     <section id="individual-results">\n
                     <h2>Individual Results</h2>"""
@@ -95,7 +98,7 @@ def csv_to_html(csv_filename, output_folder):
                 html_content += f"""
 <div class="athlete">
 <figure> 
-    <img src="../images/profiles/{profile_pic}" " alt="Profile picture of {name}"> 
+    <img src="../images/profiles/{profile_pic}" alt="Profile picture of {name}"> 
     <figcaption>{name}</figcaption>
 </figure>
 <dl>
