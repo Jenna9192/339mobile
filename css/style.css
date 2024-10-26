@@ -95,21 +95,19 @@ section h2{
     padding-top: 20px;
     padding-bottom: 20px;
     color: #00383D;
-    animation-duration: 5s;
-    animation-name: slide;
+    animation-duration: 2s;
+    animation-name: pulse;
     animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
-/* Slide section headers from side to side */
-@keyframes slide {
-    0% {
-        transform: translateX(0); /* Start at original position */
+/* Slide section headers pulse */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1) translateX(0); /* Original size and position */
     }
     50% {
-        transform: translateX(50%); /* Move to the right off-screen */
-    }
-    100% {
-        transform: translateX(0); /* Return to the original position */
+        transform: scale(1.08) translateX(10px); /* Scale up and move to the right */
     }
 }
 
@@ -295,5 +293,42 @@ dt {
 }
 
 
+/* reduce animations for preferred users */
+@media screen and (prefers-reduced-motion: reduce) {
+    /* Disable animations */
+    p {
+        opacity: 1; /* make text visible */
+        animation: none; /* Disable fade-in animation */
+    }
+
+    section h2 {
+        animation-name: none; /* Disable pulse animation */
+    }
+
+    /* Disable hover effects */
+    div {
+        transition: none; /* Disable transition on hover */
+        opacity: 1; /* Keep full opacity */
+    }
+
+    .athlete dl {
+        display: grid; /* Set display to grid */
+        grid-template-columns: auto auto; /* Define grid columns */
+        row-gap: 10px; /* Add some spacing between rows */
+        opacity: 1; /* Ensure it's fully visible */
+        transition: none; /* Disable transition for showing */
+    }
+
+    .athlete:hover dl,
+    .athlete:focus-within dl {
+        display: grid; /* Do not show details on hover */
+    }
+
+    #gallery img {
+        transition: none; /* Disable transition on hover */
+        opacity: 1; /* Keep full opacity */
+        animation-name: none;
+    }
+}
 
 
