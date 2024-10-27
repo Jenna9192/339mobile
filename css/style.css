@@ -228,6 +228,7 @@ footer a{
     text-decoration: none;
 }
 
+
 /* style atheete results section */
 #individual-results {
     display: grid;
@@ -235,6 +236,7 @@ footer a{
     justify-content: space-around;
     perspective: 600;
 }
+
 
 .athlete figure {
     cursor: pointer; /* Indicate it can be interacted with */
@@ -292,14 +294,13 @@ dt {
     border-radius: 20px;
     width: 100%;
     opacity: 0.5;
-    transition-property: opacity;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
+    transition: opacity 0.2s linear, transform 0.2s linear;
 }
 
 /* increase opacity of image when it is hover */
 #gallery img:hover{
     opacity: 1;
+    transform: scale(1.1); /* Zoom in by 10% */
 }
 
 /* reduce animations for preferred users */
