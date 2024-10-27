@@ -22,6 +22,7 @@ body{
     background-color: var(--background-color);
     font-family: Arial, Helvetica, sans-serif;
     margin: 20px;
+    font-size: 4vw;
 }
 
 /* style nav bar */
@@ -89,11 +90,11 @@ header a {
 
 h1{
     color: var(--highlight-color);
-    font-size: 1.5rem;
+    font-size: 6vw;
 }
 
 header h2{
-    font-size: 0.9rem;
+    font-size: 3vw;
 }
 
 section{
@@ -220,7 +221,7 @@ footer{
 
 footer p{
     color:var(--highlight-color);
-    font-size: 0.9rem;
+    font-size: 4vw;
 }
 
 footer a{
