@@ -112,6 +112,7 @@ p {
     }
 }
 section h2{
+    text-align: center;
     text-transform: uppercase;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -125,10 +126,10 @@ section h2{
 /* Slide section headers pulse */
 @keyframes pulse {
     0%, 100% {
-        transform: scale(1) translateX(0); /* Original size and position */
+        transform: scale(1); /* Original size and position */
     }
     50% {
-        transform: scale(1.08) translateX(10px); /* Scale up and move to the right */
+        transform: scale(1.08); /* Scale up and move to the right */
     }
 }
 
@@ -143,7 +144,7 @@ section h2{
 doesn't take up a lot of space */
 .results_table{
     width: 100%;
-    height: 550px; 
+    height: 400px; 
     overflow-y: auto;
     border-radius: 30px;
 }
@@ -188,13 +189,14 @@ table{
 
 /* style each athletes stats */
 div {
+    width: 70%;
     background-color:var(--header-background);
     color: var(--header-text-color);
     display: inline-grid;
     border: solid 2px var(--text-color);
     border-radius: 20px;
     gap: 20px;
-    margin-bottom: 20px;
+    margin: 10px auto;
 }
 
 
@@ -291,8 +293,6 @@ dt {
 #gallery img:hover{
     opacity: 1;
 }
-
-
 
 /* reduce animations for preferred users */
 @media screen and (prefers-reduced-motion: reduce) {
