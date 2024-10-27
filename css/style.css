@@ -151,7 +151,7 @@ doesn't take up a lot of space */
 }
 
 /* style header of results table */
-.results_table th{
+.results_table thead th {
     text-align: left;
     padding: 15px 25px;
     background-color:var(--header-background);
@@ -208,7 +208,6 @@ div:hover{
     opacity: 1;
 }
 
-
 /* style footer */
 footer{
     border-top-left-radius: 50px;
@@ -228,7 +227,6 @@ footer a{
     color: var(--highlight-color);
     text-decoration: none;
 }
-
 
 /* style atheete results section */
 #individual-results {
@@ -283,7 +281,7 @@ dt {
 }
 
 
-/* style gallery */
+/* style gallery grid*/
 #gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -291,6 +289,7 @@ dt {
     gap: 20px;
 }
 
+/* style gallery image*/
 #gallery img{
     border-radius: 20px;
     width: 100%;
