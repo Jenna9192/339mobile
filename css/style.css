@@ -285,7 +285,6 @@ dt {
     transition-property: opacity;
     transition-duration: 0.2s;
     transition-timing-function: linear;
-    animation: tilt 2s infinite ease-in-out;
 }
 
 /* increase opacity of image when it is hover */
@@ -293,24 +292,6 @@ dt {
     opacity: 1;
 }
 
-/* Tilt images in the gallery */
-@keyframes tilt {
-    0% {
-        transform: rotate(0deg); /* Start straight */
-    }
-    25% {
-        transform: rotate(10deg); /* Tilt slightly to the right */
-    }
-    50% {
-        transform: rotate(-10deg); /* Tilt slightly to the left */
-    }
-    75% {
-        transform: rotate(5deg); /* Tilt back to the right */
-    }
-    100% {
-        transform: rotate(0deg); /* Return to the original position */
-    }
-}
 
 
 /* reduce animations for preferred users */
