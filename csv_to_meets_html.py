@@ -64,7 +64,7 @@ def csv_to_html(csv_filename, output_folder):
         # Start container for individual results
         html_content += """<section id="team-results">\n
         <h2>Team Results</h2>
-        <div class ="results_table">"""
+        <div class ="results_table" tabindex="0">"""
 
         # Process the remaining rows (after the first five)
         html_content += """<table>\n"""
