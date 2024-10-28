@@ -1,6 +1,11 @@
 import csv
 import os
 
+def check_image_exists(profile_pic):
+    files = os.listdir('images/profiles')
+    exists = profile_pic in files
+    return exists
+
 def csv_to_html(csv_filename, output_folder):
     # Derive the HTML filename by replacing the CSV extension with '.html' in the meets folder
     html_filename = os.path.join(output_folder, os.path.splitext(os.path.basename(csv_filename))[0] + '.html')
@@ -98,9 +103,16 @@ def csv_to_html(csv_filename, output_folder):
 
                 # Add the athlete div
                 html_content += f"""
-<div class="athlete">
-<figure> 
-    <img src="../images/profiles/{profile_pic}" alt="Profile picture of {name}"> 
+                                <div class="athlete">
+                                <figure> """
+                if check_image_exists(profile_pic):
+                    html_content += f"""
+                    <img src="../images/profiles/{profile_pic}" alt="Profile picture of {name}"> """
+                else:
+                    html_content += f"""
+                    <img src="../images/default_image.jpg" alt="Profile picture of {name}"> """
+
+                html_content += f"""
     <figcaption>{name}</figcaption>
 </figure>
 <dl>
@@ -211,7 +223,7 @@ def generate_image_tags(image_files, folder_path):
     for img in image_files:
         img_path = os.path.join(folder_path, img)
         # print(f"The image_path is {img_path}")
-        img_tags.append(f'<img src=../{img_path} width = "200" alt="">')
+        img_tags.append(f'<img src=../{img_path} alt="">')
     return "\n".join(img_tags)
 
 # Putting it all together
